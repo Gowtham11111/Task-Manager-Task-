@@ -1,0 +1,421 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(247, 249, 250);
+}
+
+/* HEADER */
+
+header {
+  box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.Header-Container {
+  display: inline-block;
+  position: relative;
+  left: 5%;
+}
+Header .Logo {
+  display: inline-block;
+  background-color: rgb(93, 95, 239);
+  color: white;
+  border-radius: 8px;
+  padding: 3px 0px;
+}
+Header .Title {
+  display: inline-block;
+}
+
+/* NAV-BAR */
+
+.Nav-Container {
+  display: inline-block;
+  position: relative;
+  left: 60%;
+}
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links .Non-active-nav{
+  text-decoration: none;
+  padding: 10px;
+  margin: 0px 25px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.Active-nav{
+  background-color: rgb(242, 243, 245);
+  color: rgb(93, 95, 239);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px 18px;
+  margin: 0px 25px;
+}
+
+
+/* MAIN SECTION */
+
+.main-section {
+  background-color: rgb(247, 249, 250);
+  display: grid;
+  grid-template-columns: 30vw 65vw;
+}
+main .line {
+  content: "";
+  border: 3px solid rgb(93, 95, 239);
+  margin-right: 0.8rem;
+  border-radius: 5px;
+}
+.Main-title {
+  display: inline-block;
+  position: relative;
+  left: 3.5%;
+  margin: 35px 30px;
+  padding-left: 10px;
+  border-radius: 2px;
+  background-color: rgb(247, 249, 250);
+}
+
+/* TASK PANEL SECTION */
+
+.Task-panel-section {
+  margin: 10px 5px 10px 90px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+}
+.Task-panel-section label {
+  font-size: 15px;
+}
+.Task-panel-title {
+  font-size: 19px;
+  margin: 10px 10px;
+}
+.Task-panel-section input,
+select {
+  margin: 10px 15px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.168);
+}
+.Task-panel-section .border-red {
+  border: 2px solid red;
+}
+
+/* Selection */
+
+.Task-panel-section select {
+  padding: 10px 100px 10px 10px;
+  border-radius: 5px;
+}
+
+/* Textarea */
+
+.Task-panel-section textarea {
+  margin: 10px 15px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.168);
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 35px 137px 25px 10px;
+}
+/* Range */
+
+.Task-panel-section {
+  margin-bottom: 20px;
+}
+
+.Task-panel-section .color-label,
+.progress-label {
+  color: rgba(0, 0, 0, 0.564);
+}
+.Task-panel-section .checkbox-label,
+.status-label,
+.color-label,
+.progress-label {
+  position: relative;
+  left: 5%;
+}
+
+/* Color-picker */
+
+.Task-panel-section .task-color {
+  margin-bottom: 20px;
+}
+.Task-panel-section .color-pick {
+  height: 35px;
+  padding: 2px;
+}
+
+/* Checkbox */
+
+.Task-panel-section .task-type {
+  margin-bottom: 20px;
+}
+
+.Task-panel-section .check {
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.Task-panel-section .check-label {
+  position: relative;
+  bottom: 1px;
+  right: 5px;
+}
+
+/* Radio-button */
+
+.Task-panel-section .radio {
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: 3px;
+}
+.Task-panel-section .radio-label {
+  position: relative;
+  bottom: 1px;
+  right: 10px;
+}
+
+/* Upload-File */
+
+.Task-panel-section .upload-file {
+  border: 2px dashed rgba(204, 204, 204, 0.836);
+  border-radius: 8px;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgb(102, 102, 102);
+  cursor: pointer;
+  font-size: 0.9rem;
+  height: 100px;
+  width: 300px;
+  margin-left: 12px;
+}
+.upload-file p {
+  color: rgb(26, 26, 26);
+  margin-bottom: 0.5rem;
+}
+.upload-file .File {
+  display: none;
+}
+.upload-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+
+.Task-panel-section .Create-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: rgb(84, 98, 232);
+  padding: 22px 45px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  left: 3%;
+  bottom: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Task-panel-section .Create-button:hover {
+  background-color: #4252cc;
+  box-shadow: 0 4px 12px rgba(84, 104, 255, 0.4);
+}
+.Task-panel-section .Reset-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: rgb(242, 243, 245);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  margin-left: 10px;
+  position: relative;
+  left: 3%;
+  cursor: pointer;
+}
+.Task-panel-section .Reset-button:hover {
+  background-color: #ffe3e3;
+  /* color: #d00000; */
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+}
+
+/* ACTIVE TASKS SECTION */
+
+.Active-task-section {
+  background-color: white;
+  margin: 10px 40px 10px 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+}
+.Active-task-section .Task-card-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+}
+.Task-card-heading .Active-panel-title {
+  font-size: 19px;
+}
+.Task-card-links {
+  display: flex;
+  list-style: none;
+}
+.Task-card-links .task-card-inactive{
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.35rem 0.7rem;
+  color: black;
+  border: 2px solid rgb(232, 234, 237);
+  border-radius: 0.9rem;
+  font-size: 0.9rem;
+}
+.task-card-active{
+  background-color: rgb(93, 95, 239);
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.35rem 0.7rem;
+  color:white;
+  border: 1px solid rgb(93, 95, 239);
+  border-radius: 0.9rem;
+  font-size: 0.9rem;
+}
+
+
+/* TASK-CARD */
+
+.task-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.task-card {
+  border: 2px solid rgb(232, 234, 237);
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 25rem;
+  /* height: 20rem; */
+}
+.task-card h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+.task-card p {
+  color: rgba(0, 0, 0, 0.544);
+  margin: 1.2rem 0.2rem;
+  font-size: 0.9rem;
+}
+.priority-container {
+  border-top: 1px solid rgb(232, 234, 237);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+.Priority-high {
+  color: rgb(245, 66, 69);
+  text-transform: uppercase;
+  background-color: rgb(255, 237, 237);
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.high-dot{
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(245, 66, 69);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.Priority-medium {
+  color: rgb(250, 158, 45);
+  text-transform: uppercase;
+  background-color: rgb(255, 245, 235);
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.medium-dot{
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(250, 158, 45);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.Priority-low {
+  color: rgb(0, 185, 133);
+  text-transform: uppercase;
+  background-color: rgb(228, 247, 242);
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.low-dot{
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(0, 185, 133);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.In-progress,.Pending,.Completed{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.Pending-dot {
+  height: 11px;
+  width: 11px;
+  background-color: rgb(250, 158, 45);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.In-progress-dot{
+  height: 11px;
+  width: 11px;
+  background-color: rgb(17, 133, 242);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.Completed-dot{
+  height: 11px;
+  width: 11px;
+  background-color: rgb(0, 186, 133);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
