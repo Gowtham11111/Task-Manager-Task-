@@ -21,6 +21,11 @@
         <h2 class="Logo">TM</h2>
         <h2 class="Title">TaskManager</h2>
       </div>
+      
+      <div class="hamburger-icon">
+          <i class="fas fa-bars"></i>
+      </div>
+
       <nav class="Nav-Container">
         <ul class="nav-links">
           <li><a href="#" class="Active-nav">Dashboard</a></li>
@@ -30,6 +35,8 @@
       </nav>
     </header>
 
+    <!-- TASK PANEL SECTION -->
+
     <main>
       <h1 class="Main-title"><span class="line"></span>Task Dashboard</h1>
 
@@ -38,28 +45,30 @@
         <section class="Task-panel-section">
 
           <div class="Task-panel-title">
-            <h3> 📝 Create New Task</h3>
+            <h3>📝Create New Task</h3>
           </div>
-
-          <div class="input-text">
-            <input type="text" placeholder="Task name*"class="border-red"/>
+          <form>
+            <div class="input-text">
+            <input type="text" placeholder="Task Name *"class="border-red"/>
           </div>
 
           <div class="input-email">
-            <input type="email" placeholder="Assigne email*" class="border-red"/>
+            <input type="email" placeholder="Assignee Email *" class="border-red"/>
           </div>
 
-          <div class="input-date">
-            <!-- <label for="Date">Due Date*</label> -->
+          <div class="input-date-time">
+            <div class="input-date">
+            <label for="Date" class="Float-label">Due Date *</label>
             <input type="date"  name="Date" class="Date border-red"/>
-          </div>
 
-          <div class="input-time">
-            <!-- <label for="Time">Due Time</label> -->
+            <div class="input-time">
+            <label for="Time" class="Float-label">Due Time</label>
             <input type="time" class="Time">
           </div>
+          </div>
 
-          <div>
+          <div class="select-priority">
+            <label for="select" class="Float-label">Priority Level *</label>
             <select name="" class="priority-selection">
                 <option value="1">Low Priority</option>
                 <option value="3">Medium Priority</option>
@@ -67,11 +76,13 @@
             </select>
           </div>
 
-          <div class="hours">
-            <!-- <label for="Number">Estimated Hours</label> -->
+            <div class="hours">
+            <label for="Number" class="Float-label Float-label-Hours">Estimated Hours</label>
             <input type="number" name="Number" class="Number" value="54">
           </div>
+          </div>
 
+        
           <div class="project-url">
             <input type="url" placeholder="Project URL">
           </div>
@@ -125,26 +136,33 @@
             <button class="Create-button"> <span>&#10003</span> Create Task</button>
             <button class="Reset-button"> <span>&#10006;</span> <br> Reset</button>
           </div>
+          </form>
         </section>
+
+        <!-- ACTIVE TASKS SECTION -->
 
         <section class="Active-task-section">
           <div class="Task-card-heading">
             <div class="Active-panel-title">
               <h3>&#9989 Active Tasks</h3>
             </div>
-            <ul class="Task-card-links">
-            <li><a href="#" class="task-card-active">All</a></li>
-            <li><a href="#" class="task-card-inactive">High</a></li>
-            <li><a href="#"class="task-card-inactive">Medium</a></li>
-            <li><a href="#"class="task-card-inactive">Low</a></li>
-          </ul>
+            
+            <div>
+              <ul class="Task-card-links">
+              <li><a href="#" class="task-card-active">All</a></li>
+              <li><a href="#" class="task-card-inactive">High</a></li>
+              <li><a href="#"class="task-card-inactive">Medium</a></li>
+              <li><a href="#"class="task-card-inactive">Low</a></li>
+            </ul>
+            </div>
+            
           </div>
          <div class="task-card-container">
            <div class="task-card task-card-1">
             <h4>Designing Homepage Mockup</h4>
             <p>Create wireframes and high-fidelity mockups for the new homepage redesign project with modern Ul elements.</p>
-            <p>Due: Oct 20, 2025</p>
-            <p>Sarah Johnson</p>
+            <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 20, 2025</p>
+            <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Sarah Johnson</p>
             
             <div class="priority-container">
               <span class="Priority-high"><span class="high-dot"></span>High</span>
@@ -158,8 +176,8 @@
            <div class="task-card task-card-2">
             <h4>Fix Login Authentication Bug</h4>
             <p>Resolve the issue where users are logged out unexpectedly after 5 minutes of inactivity.</p>
-            <p>Due: Oct 15, 2025</p>
-            <p>Michael Chen</p>
+            <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 15, 2025</p>
+            <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Michael Chen</p>
 
             <div class="priority-container">
               <span class="Priority-high"><span class="high-dot"></span>High</span>
@@ -173,9 +191,9 @@
            <div class="task-card task-card-3">
             <h4>Update Documentation</h4>
             <p>Review and update the API documentation with the latest endpoint changes and examples.</p>
-            <p>Due: Oct 25, 2025</p>
-            <p>Emily Rodriguez</p>
-
+            <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 25, 2025</p>
+            <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Emily Rodriguez</p>
+      
             <div class="priority-container">
               <span class="Priority-medium"><span class="medium-dot"></span>Medium</span>
               <div class="status">
@@ -189,9 +207,9 @@
            <div class="task-card task-card-4">
             <h4>Database Performance Optimization</h4>
             <p>Analyze and optimize slow-running queries to improve overall database performance by 30%.</p>
-            <p>Due: Oct 30, 2025</p>
-            <p>David Kim</p>
-
+            <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 30, 2025</p>
+            <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">David Kim</p>
+            
             <div class="priority-container">
               <span class="Priority-medium"><span class="medium-dot"></span>Medium</span>
               <div class="status">
@@ -204,8 +222,8 @@
            <div class="task-card task-card-5">
             <h4>Implement Dark Mode</h4>
             <p>Add dark mode theme support across the application with user preference persistence</p>
-            <p>Due: Oct 05, 2025</p>
-            <p>Alex Thompson</p>
+            <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 05, 2025</p>
+            <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Alex Thompson</p>
 
             <div class="priority-container">
               <span class="Priority-low"><span class="low-dot"></span>Low</span>
@@ -219,8 +237,8 @@
            <div class="task-card task-card-6">
             <h4>User Testing Session</h4>
             <p>Conduct user testing sessions with 10 participants to gather feedback on the new interface.</p>
-            <p>Due: Oct 28, 2025</p>
-            <p>Lisa Anderson</p>
+            <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 28, 2025</p>
+            <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Lisa Anderson</p>
 
             <div class="priority-container">
               <span class="Priority-high"><span class="high-dot"></span>High</span>
@@ -236,5 +254,50 @@
       </section>
     </main>
 
+    <footer class="footer">
+
+      <div class="footer-container">
+        <div class="footer-content">
+          <h4>TaskManager</h4>
+          <p>Organize your work and life, finally.</p>
+        </div>
+
+        <div class="footer-content">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="#">Task Management</a></li>
+            <li><a href="#">Team Collaboration</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-content">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+       <div class="footer-copyrights">
+         <p>© 2025 TaskManager. All rights reserved. Built with ❤️ for productivity.</p>
+       </div>
+      </div>
+    </footer>
+    
   </body>
 </html>
