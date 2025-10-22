@@ -46,6 +46,8 @@ Header .Title {
 nav .nav-links {
   list-style: none;
   display: flex;
+  position: relative;
+  right: 20%;
 }
 .nav-links .Non-active-nav{
   text-decoration: none;
@@ -62,9 +64,9 @@ nav .nav-links {
   margin: 0px 25px;
 }
 header .hamburger-icon{
-  /* visibility: hidden; */
-  display: inline-block;
+  visibility: hidden;
   position: relative;
+  display: inline-block;
   left: 32%;
   font-size: 20px;
   padding: 5px 10px 5px 10px;
@@ -98,9 +100,12 @@ main .line {
 /* TASK PANEL SECTION */
 
 .Task-panel-section {
+  position: relative;
+  left: 5%;
   margin: 10px 5px 10px 90px;
   background-color: white;
-  padding: 20px;
+  padding: 20px 0px 20px 15px;
+  width: 75%;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.15);
 }
@@ -284,16 +289,11 @@ select {
 
 .Active-task-section {
   background-color: white;
-  margin: 10px 40px 10px 30px;
+  margin: 10px 100px 19px 30px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.15);
 }
-/* .Active-task-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem;
-} */
  .Active-task-section img{
   height: 5%;
   width: 5%;
@@ -503,14 +503,22 @@ footer{
     margin-top: 1%;
 }
 
+@media screen and (max-width:1000px){
+  .task-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+header{
+  width: 100%;
+}
+}
 
 @media screen and (max-width:500px){
-  /* body{
-    width: maxmin(500px,100px);
-  } */
+
+  /* HEADER */ 
+
   header{
      width: 100%;
-     /* height: 8.5vh; */
   }
  .Nav-Container{
     display: none;
@@ -527,9 +535,12 @@ footer{
     top: 5px;
     font-size: 27px;
   }
-  .header .hamburger-icon{
+  header .hamburger-icon{
     visibility: visible;
   }
+
+  /* MAIN SECTION */ 
+
   .main-section{
     display: grid;
     grid-template-columns: 1fr;
@@ -540,14 +551,16 @@ footer{
     font-size: 25px;
     margin: 12% 2% 8% 1%;
   }
+
+  /* TASK PANEL SECTION */
+
   main .Task-panel-section{
     width: fit-content;
-    margin: 1% 2% 8% 5%;
+    margin: 1% 90% 8% 4%;
     border-radius: 15px;
     padding: 1% 2% 2% 2%;
-
   }
-  .Task-panel-section input{
+  /* .Task-panel-section input{
     width: 300px;
     margin: 15px 15px;
     padding: 15px 15px 15px 19px;
@@ -575,10 +588,10 @@ footer{
     font-size: 14px;
     top: 7px;
   }
-  .Float-label-Hours{
-    position: absolute;
-    left: 100px;
-  }
+  .Float-Hours{
+    position: relative;
+    top: 1000px;
+  } */
   .Task-panel-section textarea{
     padding: 35px 106px 25px 10px;
     border-radius: 8px;
@@ -656,5 +669,5 @@ footer{
     display: block;
     text-align: center;
   }
-
 }
+
