@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   background-color: rgb(247, 249, 250);
 }
 
-/* HEADER */
+/*----------HEADER-----------*/
 
 header {
   box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.15);
@@ -36,7 +36,7 @@ Header .Title {
   display: inline-block;
 }
 
-/* NAV-BAR */
+/*----------NAV-BAR-----------*/
 
 .Nav-Container {
   display: inline-block;
@@ -49,13 +49,13 @@ nav .nav-links {
   position: relative;
   right: 20%;
 }
-.nav-links .Non-active-nav{
+.nav-links .Non-active-nav {
   text-decoration: none;
   padding: 10px;
   margin: 0px 20px;
   color: rgba(0, 0, 0, 0.6);
 }
-.Active-nav{
+.Active-nav {
   background-color: rgb(242, 243, 245);
   color: rgb(93, 95, 239);
   border-radius: 10px;
@@ -64,18 +64,18 @@ nav .nav-links {
   margin: 0px 25px;
   outline: none;
 }
-header .hamburger-icon{
+header .hamburger-icon {
   visibility: hidden;
   display: inline-block;
   position: relative;
   left: 32%;
   font-size: 20px;
   padding: 5px 10px 5px 10px;
-  background-color:rgb(242, 243, 245);
+  background-color: rgb(242, 243, 245);
   border-radius: 5px;
 }
 
-/* MAIN SECTION */
+/*---------MAIN-SECTION----------*/
 
 .main-section {
   background-color: rgb(247, 249, 250);
@@ -117,8 +117,7 @@ main .line {
   font-size: 19px;
   margin: 10px 10px;
 }
-.Task-panel-section input,
-select {
+.Task-panel-section input,select {
   margin: 10px 10px 10px 8px;
   padding: 10px;
   width: 95%;
@@ -130,20 +129,20 @@ select {
 .Task-panel-section .border-red {
   border: 2px solid red;
 }
-.input-date-time .input-date,.input-time,.select-priority,.hours{
+.input-date-time .input-date,.input-time,.select-priority,.hours {
   line-height: 0%;
 }
 
 /* Floating-label */
 
-.Task-panel-section .Float-label{
+.Task-panel-section .Float-label {
   color: rgb(87, 104, 235);
   background-color: white;
   padding: 0% 1%;
   font-size: 11px;
   position: relative;
   top: 11px;
-  left:20px;
+  left: 20px;
 }
 
 /* Selection */
@@ -164,24 +163,21 @@ select {
   outline-color: rgb(93, 95, 239);
   width: 95%;
 }
+
 /* Range */
 
 .Task-panel-section {
   margin-bottom: 20px;
 }
 
-.Task-panel-section .color-label,
-.progress-label {
+.Task-panel-section .color-label,.progress-label {
   color: rgba(0, 0, 0, 0.564);
 }
-.Task-panel-section .checkbox-label,
-.status-label,
-.color-label,
-.progress-label {
+.Task-panel-section .checkbox-label,.status-label,.color-label,.progress-label {
   position: relative;
   left: 2.5%;
 }
-.task-progress-label{
+.task-progress-label {
   text-align: center;
   color: #5768eb;
   font-weight: 600;
@@ -205,7 +201,6 @@ select {
 .Task-panel-section .task-type {
   margin-bottom: 20px;
 }
-
 .Task-panel-section .check {
   width: 19px;
   height: 19px;
@@ -274,9 +269,7 @@ select {
   left: 4%;
   bottom: 9px;
   cursor: pointer;
-  /* transition: all 0.2s ease; */
 }
-
 .Task-panel-section .Create-button:hover {
   background-color: #4252cc;
   box-shadow: 0 4px 12px rgba(84, 104, 255, 0.4);
@@ -296,7 +289,6 @@ select {
 }
 .Task-panel-section .Reset-button:hover {
   background-color: #ffe3e3;
-  /* color: #d00000; */
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
 }
 
@@ -309,14 +301,14 @@ select {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.15);
 }
- .Active-task-section img{
+.Active-task-section img {
   height: 5%;
   width: 5%;
   position: relative;
   top: 3px;
   margin-right: 8px;
- }
-.Task-card-heading{
+}
+.Task-card-heading {
   display: flex;
   justify-content: space-between;
   padding: 0.8rem;
@@ -328,7 +320,7 @@ select {
   display: flex;
   list-style: none;
 }
-.Task-card-links .task-card-inactive{
+.Task-card-links .task-card-inactive {
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.35rem 0.7rem;
@@ -337,13 +329,13 @@ select {
   border-radius: 0.9rem;
   font-size: 0.9rem;
 }
-.task-card-active{
+.task-card-active {
   background-color: rgb(93, 95, 239);
   color: white;
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.35rem 0.7rem;
-  color:white;
+  color: white;
   border: 1px solid rgb(93, 95, 239);
   border-radius: 0.9rem;
   font-size: 0.9rem;
@@ -355,17 +347,17 @@ select {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.task-card{
+.task-card {
   border: 2px solid rgb(232, 234, 237);
   border-radius: 0.6rem;
   padding: 1.5rem;
   margin: 1rem;
   width: 25rem;
-  transition: transform 0.2s,box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.task-card:hover{
+.task-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0,0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 .task-card h4 {
   margin-top: 0.5rem;
@@ -396,7 +388,7 @@ select {
   display: flex;
   align-items: center;
 }
-.high-dot{
+.high-dot {
   margin-right: 5px;
   height: 10px;
   width: 10px;
@@ -417,7 +409,7 @@ select {
   display: flex;
   align-items: center;
 }
-.medium-dot{
+.medium-dot {
   margin-right: 5px;
   height: 10px;
   width: 10px;
@@ -438,7 +430,7 @@ select {
   display: flex;
   align-items: center;
 }
-.low-dot{
+.low-dot {
   margin-right: 5px;
   height: 10px;
   width: 10px;
@@ -447,7 +439,7 @@ select {
   display: inline-block;
   vertical-align: middle;
 }
-.In-progress,.Pending,.Completed{
+.In-progress,.Pending,.Completed {
   font-weight: 500;
   font-size: 0.9rem;
 }
@@ -459,7 +451,7 @@ select {
   display: inline-block;
   vertical-align: middle;
 }
-.In-progress-dot{
+.In-progress-dot {
   height: 11px;
   width: 11px;
   background-color: rgb(17, 133, 242);
@@ -467,7 +459,7 @@ select {
   display: inline-block;
   vertical-align: middle;
 }
-.Completed-dot{
+.Completed-dot {
   height: 11px;
   width: 11px;
   background-color: rgb(0, 186, 133);
@@ -476,101 +468,100 @@ select {
   vertical-align: middle;
 }
 
+/*----------FOOTER-----------*/
 
-/* FOOTER */
-
-footer{
-    padding: 2rem;
-    border-top: 2px solid rgb(232, 234, 237);
-    margin-top: 2%;
+footer {
+  padding: 2rem;
+  border-top: 2px solid rgb(232, 234, 237);
+  margin-top: 2%;
 }
-.footer-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 2px solid rgb(232, 234, 237);
-    margin: 0% 15%;
-    padding-bottom: 2%;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(232, 234, 237);
+  margin: 0% 15%;
+  padding-bottom: 2%;
 }
-.footer-container h4{
+.footer-container h4 {
   margin-bottom: 10%;
 }
-.footer-content a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.544);
+.footer-content a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.544);
 }
-.footer-content p{
-    color: rgba(0, 0, 0, 0.544);
+.footer-content p {
+  color: rgba(0, 0, 0, 0.544);
 }
-.footer-content ul{
-    list-style: none;
+.footer-content ul {
+  list-style: none;
 }
-.footer-content li{
+.footer-content li {
   padding: 6% 0%;
 }
-.footer-bottom{
+.footer-bottom {
   display: flex;
   justify-content: space-around;
 }
-.footer-copyrights{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-    color: rgba(0, 0, 0, 0.544);
-    margin-top: 1%;
+.footer-copyrights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.544);
+  margin-top: 1%;
 }
 
-/*------------------------MOBILE-VIEW---------------------*/
+/*----------MOBILE-VIEW-----------*/
 
-@media (min-width:0px) and (max-width:600px){
+@media (min-width: 0px) and (max-width: 600px) {
 
-  /* HEADER */ 
+  /* HEADER */
 
-  header{
-     width: 100%;
+  header {
+    width: 100%;
   }
- .Nav-Container{
+  .Nav-Container {
     display: none;
   }
-  Header .Logo{
+  Header .Logo {
     position: relative;
     right: 5%;
     top: 5px;
     padding: 5px 0px 5px 0px;
   }
-  Header .Title{
+  Header .Title {
     position: relative;
-    right: 4%; 
+    right: 4%;
     top: 5px;
     font-size: 27px;
   }
-  header .hamburger-icon{
+  header .hamburger-icon {
     visibility: visible;
   }
 
-  /* MAIN SECTION */ 
+  /* MAIN SECTION */
 
-  .main-section{
+  .main-section {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0%;
     width: 100%;
   }
-  .Main-title{
+  .Main-title {
     font-size: 25px;
     margin: 12% 2% 8% 1%;
   }
 
   /* TASK PANEL SECTION */
 
-  main .Task-panel-section{
+  main .Task-panel-section {
     width: fit-content;
     margin: 1% 92% 8% 4%;
     border-radius: 15px;
     padding: 1% 3% 2% 2%;
   }
-  .Task-panel-section input{
+  .Task-panel-section input {
     width: 300px;
     margin: 15px 15px;
     padding: 15px 15px 15px 19px;
@@ -578,16 +569,16 @@ footer{
     border-radius: 8px;
     font-weight: 500;
   }
-  .input-date{
+  .input-date {
     position: relative;
   }
-  .input-time{
+  .input-time {
     position: relative;
   }
-  .select-priority{
+  .select-priority {
     position: relative;
   }
-  .input-date-time .Float-label{
+  .input-date-time .Float-label {
     position: absolute;
     font-size: 14px;
     top: 14px;
@@ -595,10 +586,10 @@ footer{
     padding: 2px 5px;
     left: 35px;
   }
-  .hours .Float-Hours{
+  .hours .Float-Hours {
     position: relative;
   }
-  .Task-panel-section select{
+  .Task-panel-section select {
     margin-top: 15px;
     padding: 15px 0px 15px 15px;
     font-size: 17px;
@@ -606,103 +597,106 @@ footer{
     width: 300px;
     margin-left: 15px;
   }
-  .Task-panel-section textarea{
+  .Task-panel-section textarea {
     padding: 35px 106px 25px 10px;
     border-radius: 8px;
     font-size: 17px;
   }
-  .Task-panel-section button{
+  .Task-panel-section button {
     font-size: 16px;
   }
-  .Task-panel-section .Create-button{
+  .Task-panel-section .Create-button {
     padding: 18px 37px;
     margin-left: 0px;
   }
-  .Task-panel-section .Reset-button{
+  .Task-panel-section .Reset-button {
     padding: 10px 30px;
     margin-left: 16px;
   }
 
   /* ACTIVE TASKS SECTION */
 
-  .Active-task-section{
+  .Active-task-section {
     padding: 25px;
     border-radius: 15px;
     position: relative;
     left: 3px;
   }
-  .Active-panel-title{
+  .Active-panel-title {
     position: relative;
     bottom: 12px;
     right: 15px;
   }
-  .Task-card-links{
+  .Task-card-links {
     position: relative;
     right: 25px;
     top: 10px;
   }
-  .Task-card-links .task-card-inactive{
+  .Task-card-links .task-card-inactive {
     font-size: 14px;
     padding: 0.35rem 0.7rem;
   }
-  .task-card-container .task-card{
+  .task-card-container .task-card {
     width: 100%;
     margin-right: 10%;
   }
-  .Task-card-heading{
+  .Task-card-heading {
     display: block;
   }
-  .task-card-container{
+  .task-card-container {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .task-card-container .task-card{
+  .task-card-container .task-card {
     position: relative;
     right: 15px;
   }
-  .footer-container{
+
+  /* FOOTER */
+
+  .footer-container {
     display: block;
     text-align: center;
   }
-  .footer-container p{
+  .footer-container p {
     font-size: 18px;
     font-weight: 500;
   }
-  .footer-container h4{
+  .footer-container h4 {
     font-size: 20px;
     margin-bottom: 25px;
   }
-  .footer-content{
+  .footer-content {
     margin-bottom: 40px;
   }
-  .footer-content ul{
+  .footer-content ul {
     font-size: 18px;
   }
-  .footer-content li{
+  .footer-content li {
     padding: 8px 0px;
     font-weight: 500;
-   }
-  .footer-bottom{
+  }
+  .footer-bottom {
     display: block;
     text-align: center;
   }
 }
 
-/*------------------------TABLET-VIEW---------------------*/
+/*----------TABLET-VIEW-----------*/
 
 @media (min-width: 601px) and (max-width: 1024px) {
-  header{
+  header {
     height: 6vh;
   }
-  header .Header-Container{
+  header .Header-Container {
     position: relative;
     left: 2.3%;
   }
-  nav .nav-links{
+  nav .nav-links {
     position: relative;
     right: 0%;
   }
-  main .Main-title{
+  main .Main-title {
     position: relative;
     left: 1%;
   }
@@ -726,44 +720,106 @@ footer{
   }
   .task-card-container {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-right: 5%;
   }
-  
   .Task-panel-section input,
-  .Task-panel-section select{
+  .Task-panel-section select {
     width: 100%;
     padding: 15px 10px;
     font-size: 18px;
     border-radius: 8px;
   }
-  .Task-panel-section textarea{
+  .Task-panel-section .Float-label{
+    font-size: 15px;
+  }
+  .Task-panel-section .color-label{
+    font-size: 18px;
+  }
+  .Task-panel-section .progress-label{
+    font-size: 18px;
+  }
+  .Task-panel-section .checkbox-label,
+  .status-label{
+    font-size: 18px;
+  }
+  .Task-panel-section .status-label{
+    font-size: 18px;
+  }
+  .Task-panel-section textarea {
     width: 100%;
     font-size: 18px;
     border-radius: 8px;
   }
+  .Task-panel-section .check{
+    margin-left: 15px;
+  }
+  .Task-panel-section .check-label{
+    font-size: 16px;
+    margin-left: 10px;
+  }
   .Task-panel-section .upload-file {
     width: 100%;
   }
-  .Task-panel-section .Buttons{
+  .Task-panel-section .radio-label{
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .Task-panel-section .radio{
+    margin-left: 20px;
+  }
+  .Task-panel-section .upload-file{
+    position: relative;
+    right: 10px;
+  }
+  .upload-file p{
+    font-size: 16px;
+  }
+  .Task-panel-section .Buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+  }
+  .Task-panel-section .Create-button{
+    font-size: 16px;
+  }
+  .Task-panel-section .Reset-button{
+    font-size: 16px;
+    padding: 0px 50px;
+    position: relative;
+    bottom: 5px;
   }
   .task-card {
     width: 100%;
+  }
+  .task-card p{
+    font-size: 16px;
+  }
+  footer{
+    margin-top: 5%;
   }
   .footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
   }
+  .footer-container h4{
+    margin-bottom: 5%;
+  }
+  .footer-content p{
+    margin-top: 35px;
+  }
+  .footer-content{
+    margin-bottom: 15%;
+    font-size: 18px;
+  }
   .footer-bottom {
     flex-direction: column;
     align-items: center;
+    font-size: 18px;
   }
 }
 
-@media (min-width: 600px) and (max-width: 1500px){
+@media (min-width: 600px) and (max-width: 1500px) {
   header {
     display: flex;
     align-items: center;
@@ -779,19 +835,8 @@ footer{
     display: flex;
     gap: 12px;
   }
-  .nav-links .Non-active-nav,
-  .Active-nav {
+  .nav-links .Non-active-nav,.Active-nav {
     margin: 0;
     padding: 8px 12px;
   }
-  .task-card-container {
-  display: grid;
-  /* grid-template-columns: 1fr 1fr; */
 }
-}
-
-
-
-
-
-
