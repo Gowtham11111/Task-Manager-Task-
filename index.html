@@ -1,142 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 
-    <!-- HEADER -->
+<body>
 
-     <header>
-      <div class="Header-Container">
-        <h2 class="Logo">TM</h2>
-        <h2 class="Title">TaskManager</h2>
-      </div>
-      <div class="hamburger-icon">
-          <i class="fas fa-bars"></i>
-      </div>
+  <!-- HEADER -->
+   
+  <header>
+    <div class="Header-Container">
+      <h2 class="Logo">TM</h2>
+      <h2 class="Title">TaskManager</h2>
+    </div>
 
-      <!-- NAV-BAR -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
 
-      <nav class="Nav-Container">
-        <ul class="nav-links">
-          <li><a href="#" class="Active-nav">Dashboard</a></li>
-          <li><a href="#" class="Non-active-nav">Tasks</a></li>
-          <li><a href="#" class="Non-active-nav">Profile</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- NAV-BAR -->
 
-    <main>
-      <h1 class="Main-title"><span class="line"></span>Task Dashboard</h1>
-      <section class="main-section">
+    <nav class="Nav-Container">
+      <ul class="nav-links">
+        <li><a href="#" class="Active-nav">Dashboard</a></li>
+        <li><a href="#" class="Non-active-nav">Tasks</a></li>
+        <li><a href="#" class="Non-active-nav">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- TASK PANEL SECTION -->
+  <main>
+    <h1 class="Main-title"><span class="line"></span>Task Dashboard</h1>
+    <section class="main-section">
 
-        <section class="Task-panel-section">
-          <div class="Task-panel-title">
-            <h3>📝Create New Task</h3>
+      <!-- TASK PANEL SECTION -->
+
+      <section class="Task-panel-section">
+        <div class="Task-panel-title">
+          <h3>📝Create New Task</h3>
+        </div>
+
+        <form>
+          <div class="input-text">
+            <input type="text" placeholder="Task Name *" class="border-red" required />
           </div>
-          <form>
-            <div class="input-text">
-              <input type="text" placeholder="Task Name *"class="border-red"/>
-            </div>
 
           <div class="input-email">
-            <input type="email" placeholder="Assignee Email *" class="border-red"/>
+            <input type="email" placeholder="Assignee Email *" class="border-red" required />
           </div>
 
           <div class="input-date-time">
             <div class="input-date">
               <label for="Date" class="Float-label">Due Date *</label>
-              <input type="date"  name="Date" class="Date border-red"/>
-              <div class="input-time">
-                <label for="Time" class="Float-label">Due Time</label>
-                <input type="time" class="Time">
-              </div>
+              <input type="date" name="Date" class="Date border-red" required />
+
+              <label for="Time" class="Float-label">Due Time</label>
+              <input type="time" class="Time">
             </div>
-            <div class="select-priority">
-              <label for="select" class="Float-label">Priority Level *</label>
-              <select name="" class="priority-selection">
-                <option value="1">Low Priority</option>
-                <option value="3">Medium Priority</option>
-                <option value="2">High Priority</option>
-              </select>
-            </div>
-            <div class="hours">
-              <label for="Number" class="Float-label Float-Hours">Estimated Hours</label>
-              <input type="number" name="Number" class="Number" value="54">
-            </div>
+          </div>
+          
+          <div class="select-priority">
+            <label for="select" class="Float-label">Priority Level *</label>
+            <select required class="priority-selection">
+              <option value="1">Low Priority</option>
+              <option value="3">Medium Priority</option>
+              <option value="2">High Priority</option>
+            </select>
+          </div>
+
+          <div class="hours">
+            <label for="Number" class="Float-label Float-Hours">Estimated Hours</label>
+            <input type="number" name="Number" class="Number" value="54"
+                onkeydown="return !['e','E','+','-'].includes(event.key);">
           </div>
 
           <div class="project-url">
             <input type="url" placeholder="Project URL">
           </div>
 
-          <div class="task-Description"> 
+          <div class="task-Description">
             <textarea placeholder="Task-Description"></textarea>
           </div>
 
           <div class="task-progress">
             <label for="range" class="progress-label">Task Progress</label> <br>
-            <input type="range" name="range" class="input-range"> <br> <p class="task-progress-label">0%</p>
+            <input type="range" name="range" class="input-range" min="0" max="100" value="0"> <br>
+            <p class="task-progress-label">0%</p>
           </div>
 
-          <div class="task-color"> 
+          <div class="task-color">
             <label for="color" class="color-label">Task Color</label> <br>
             <input type="color" name="color" class="color-pick">
           </div>
 
           <div class="task-type">
             <label for="" class="checkbox-label">Task Type</label> <br>
-            <input type="checkbox" class="check" > <label for="" class="check-label">Bug Fix</label>  
-            <input type="checkbox" class="check"> <label for="" class="check-label">Feature</label> <br>
-            <input type="checkbox" class="check"> <label for="" class="check-label">Enhancement</label>
+                <input type="checkbox" class="check" id="Bug"> <label for="Bug" class="check-label">Bug Fix</label>
+                <input type="checkbox" class="check" id="Feature"> <label for="Feature" class="check-label">Feature</label> <br class="check-radio-br">
+                <input type="checkbox" class="check" id="Enhancement"> <label for="Enhancement" class="check-label">Enhancement</label>
           </div>
 
           <div class="status">
             <label for="" class="status-label">Status</label> <br>
-            <input type="radio" name="Status" class="radio"> <label for="" class="radio-label">Pending</label>
-            <input type="radio" name="Status" class="radio"> <label for="" class="radio-label">In Progress</label> <br>
-            <input type="radio" name="Status" class="radio"> <label for="" class="radio-label">Completed</label>
+                <input type="radio" name="Status" class="radio" id="Pending"> <label for="Pending" class="radio-label">Pending</label>
+                <input type="radio" name="Status" class="radio" id="In Progress"> <label for="In Progress" class="radio-label">In Progress</label> <br class="check-radio-br">
+                <input type="radio" name="Status" class="radio" id="Completed"> <label for="Completed" class="radio-label">Completed</label>
           </div>
 
           <div class="upload-file">
-            <label class="label">
-              <input type="file" name="attachments" class="File">
+            <label class="upload-box">
               <p><i class="fa-solid fa-paperclip"></i> Click to upload attachments</p>
               <small>Supported: PDF, DOC, Images</small>
+              <input type="file" class="input-upload" accept=".pdf,.doc,.docx,image/*">
             </label>
           </div>
 
           <div class="Buttons">
-            <button class="Create-button"> <span>&#10003</span> Create Task</button>
-            <button class="Reset-button"> <span>&#10006;</span> <br> Reset</button>
+            <button type="submit" class="Create-button"> <span>&#10003</span> Create Task</button>
+            <button type="reset" class="Reset-button"> <span>&#10006;</span> <br> Reset</button>
           </div>
         </form>
       </section>
-      
+
       <!-- ACTIVE TASKS SECTION -->
 
-       <section class="Active-task-section">
+      <section class="Active-task-section">
         <div class="Task-card-heading">
-            <div class="Active-panel-title">
-              <h3>&#9989 Active Tasks</h3>
-            </div>
-            <div>
-              <ul class="Task-card-links">
-                <li><a href="#" class="task-card-active">All</a></li>
-                <li><a href="#" class="task-card-inactive">High</a></li>
-                <li><a href="#"class="task-card-inactive">Medium</a></li>
-                <li><a href="#"class="task-card-inactive">Low</a></li>
-              </ul>
-            </div>
+          <div class="Active-panel-title">
+            <h3>&#9989 Active Tasks</h3>
+          </div>
+
+          <div class="Task-card-links">
+            <input type="radio" name="priority" id="all" checked>
+            <label for="all" class="task-card-active">All</label>
+
+            <input type="radio" name="priority" id="high">
+            <label for="high" class="task-card-inactive">High</label>
+
+            <input type="radio" name="priority" id="medium">
+            <label for="medium" class="task-card-inactive">Medium</label>
+
+            <input type="radio" name="priority" id="low">
+            <label for="low" class="task-card-inactive">Low</label>
+          </div>
         </div>
 
         <!-- TASK-CARD -->
@@ -144,10 +155,11 @@
         <div class="task-card-container">
           <div class="task-card task-card-1">
             <h4>Designing Homepage Mockup</h4>
-            <p>Create wireframes and high-fidelity mockups for the new homepage redesign project with modern Ul elements.</p>
+            <p>Create wireframes and high-fidelity mockups for the new homepage redesign project with modern Ul
+              elements.</p>
             <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 20, 2025</p>
             <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Sarah Johnson</p>
-            
+
             <div class="priority-container">
               <span class="Priority-high"><span class="high-dot"></span>High</span>
               <div class="status">
@@ -169,15 +181,15 @@
                 <span class="Pending-dot"></span>
                 <span class="Pending">Pending</span>
               </div>
-            </div> 
+            </div>
           </div>
-          
+
           <div class="task-card task-card-3">
             <h4>Update Documentation</h4>
             <p>Review and update the API documentation with the latest endpoint changes and examples.</p>
             <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 25, 2025</p>
             <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">Emily Rodriguez</p>
-      
+
             <div class="priority-container">
               <span class="Priority-medium"><span class="medium-dot"></span>Medium</span>
               <div class="status">
@@ -186,13 +198,13 @@
               </div>
             </div>
           </div>
-          
+
           <div class="task-card task-card-4">
             <h4>Database Performance Optimization</h4>
             <p>Analyze and optimize slow-running queries to improve overall database performance by 30%.</p>
             <p class="task-card-date"><img src="images/Calendar-image.png" alt="Calendar-image">Due: Oct 30, 2025</p>
             <p class="task-card-person"><img src="images/Person-image.png" alt="Person-image">David Kim</p>
-            
+
             <div class="priority-container">
               <span class="Priority-medium"><span class="medium-dot"></span>Medium</span>
               <div class="status">
@@ -216,7 +228,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="task-card task-card-6">
             <h4>User Testing Session</h4>
             <p>Conduct user testing sessions with 10 participants to gather feedback on the new interface.</p>
@@ -231,53 +243,53 @@
               </div>
             </div>
           </div>
-         </div>
-        </section>
+        </div>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <!-- FOOTER -->
+  <!-- FOOTER -->
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-content">
-          <h4>TaskManager</h4>
-          <p>Organize your work and life, finally.</p>
-        </div>
-        <div class="footer-content">
-          <h4>Features</h4>
-          <ul>
-            <li><a href="#">Task Management</a></li>
-            <li><a href="#">Team Collaboration</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Integrations</a></li>
-          </ul>
-        </div>
-        <div class="footer-content">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">API Reference</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-        <div class="footer-content">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <h4>TaskManager</h4>
+        <p>Organize your work and life, finally.</p>
       </div>
-      
-      <div class="footer-bottom">
-       <div class="footer-copyrights">
-         <p>© 2025 TaskManager. All rights reserved. Built with ❤️ for productivity.</p>
-       </div>
+      <div class="footer-content">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">Task Management</a></li>
+          <li><a href="#">Team Collaboration</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyrights">
+        <p>© 2025 TaskManager. All rights reserved. Built with ❤️ for productivity.</p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
