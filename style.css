@@ -198,7 +198,6 @@ main .line {
 .Task-panel-section .input-range {
   cursor: pointer;
   padding: 0%;
-  accent-color: rgb(81, 81, 247);
 }
 .Task-panel-section .color-label,.progress-label {
   color: rgba(0, 0, 0, 0.564);
@@ -379,12 +378,12 @@ main .line {
 
 .Task-card-links label {
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: clamp(0.5rem,2vw,1rem);
   padding: 0.3rem 0.75rem;
   color: black;
   border: 2px solid rgb(232, 234, 237);
   border-radius: 0.9rem;
-  font-size: 0.9rem;
+  font-size:clamp(0.7rem,2vw,1rem);
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -675,16 +674,16 @@ footer {
   }
   .Task-panel-section .check-label {
     font-size: 17px;
-    margin-left: 100px;
+    margin-left: 65px;
     position: relative;
-    left: -100px;
+    left: -65px;
   }
   .check-radio-br{
     display: none;
   }
   
   /* Radio-button */
-
+  
   .Task-panel-section .status-label {
     font-size: 18px;
     left: 12px;
@@ -694,8 +693,8 @@ footer {
   }
   .Task-panel-section .radio-label {
     font-size: 17px;
-    margin-left: 87px;
-    left: -87px;
+    margin-left: 65px;
+    left: -65px;
   }
 
   /* Upload-File */
@@ -854,6 +853,9 @@ footer {
     padding: 15px;
     border-radius: 16px;
   }
+  .Task-panel-title{
+    margin: 10px 10px 10px -5px;
+  }
   .Task-panel-section input,.Task-panel-section select,.Task-panel-section textarea {
     width: 100%;
     font-size: 17px;
@@ -967,6 +969,11 @@ footer {
     margin-top: 20px;
     border-radius: 16px;
   }
+  .Active-task-section img{
+    top: 2.5px;
+    height: 7%;
+    width: 7%;
+  }
   .Task-card-heading {
     flex-direction: column;
     align-items: center;
@@ -975,7 +982,8 @@ footer {
     font-size: 19px;
     position: relative;
     right: 24.5%;
-    bottom: 5px;
+    bottom: 2px;
+    flex-wrap: nowrap;
   }
   .Task-card-links {
     /* flex-wrap: wrap; */
@@ -984,11 +992,11 @@ footer {
     top: 12px;
     margin-bottom: 15px;
     margin-top: 10px;
-    margin-left: 0px;
     width: 100%;
   }
   .Task-card-links label {
     padding: 0.3rem 0.8rem;
+    font-size:clamp(0.85rem,3.5vw,1rem);
   }
   .task-card-container {
     grid-template-columns: 1fr;
@@ -1008,7 +1016,7 @@ footer {
   /* FOOTER */
 
   footer {
-    margin-top: 40px;
+    margin-top: 35px;
   }
   .footer-container {
     display: block;
