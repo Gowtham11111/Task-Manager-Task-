@@ -269,7 +269,9 @@ main .line {
 /* Upload-File */
 
 .Task-panel-section .upload-box {
-  width: 315px;
+  /* width: 315px; */
+  width: 94%;
+  max-width: 100%;
   height: 100px;
   border: 2px dashed rgba(204, 204, 204, 0.836);
   border-radius: 8px;
@@ -282,8 +284,8 @@ main .line {
   transition: border-color 0.2s ease;
   padding: 1rem 2rem;
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  margin-left: 12px;
+  margin-bottom: 2.5rem;
+  margin-left: 10px;
 }
 .upload-box:hover {
   border-color: #007bff;
@@ -299,11 +301,14 @@ main .line {
 .upload-file small {
   font-size: 12px;
   color: #777;
-  margin-top: 4px;
+  margin-top: 13px;
 }
 
 /* Button */
 
+.Task-panel-section .Buttons{
+  display: flex;
+}
 .Task-panel-section .Create-button {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -313,10 +318,12 @@ main .line {
   border-radius: 8px;
   color: white;
   position: relative;
-  left: 4%;
+  /* left: 4%; */
+  margin-left: 10px;
   bottom: 9px;
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s;
+  flex-basis: 70%;
 }
 .Task-panel-section .Create-button:hover {
   background-color: #4252cc;
@@ -330,11 +337,14 @@ main .line {
   border: none;
   border-radius: 8px;
   color: black;
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-right: 10px;
   position: relative;
-  left: 5%;
+  /* left: 5%; */
+  bottom: 8px;
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s;
+  flex-basis: 25%;
 }
 .Task-panel-section .Reset-button:hover {
   background-color: #ffe3e3;
@@ -351,8 +361,8 @@ main .line {
   box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.15);
 }
 .Active-task-section img {
-  height: 5%;
-  width: 5%;
+  height: 17px;
+  width: 17pxpx;
   position: relative;
   top: 3px;
   margin-right: 8px;
@@ -383,7 +393,7 @@ main .line {
   color: black;
   border: 2px solid rgb(232, 234, 237);
   border-radius: 0.9rem;
-  font-size:clamp(0.7rem,2vw,1rem);
+  font-size:clamp(0.7rem,2vw,0.9rem);
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -721,7 +731,7 @@ footer {
   }
   .Task-panel-section .Create-button {
     font-size: 16px;
-    flex-basis: 63%;
+    flex-basis: 70%;
     left: 1%;
     bottom: 5px;
   }
@@ -729,7 +739,7 @@ footer {
     font-size: 16px;
     bottom: 5px;
     flex-basis: 35%;
-    left: 1%;
+    left: 2%;
     margin-left: 20px;
   }
 
@@ -751,6 +761,9 @@ footer {
   .task-card p {
     font-size: 16px;
   }
+
+  /*----------FOOTER-----------*/
+
   footer {
     margin-top: 5%;
   }
@@ -865,7 +878,7 @@ footer {
   }
   .Task-panel-section .Float-label {
     font-size: 13px;
-    top: 10px;
+    top: 12px;
   }
   .Task-panel-section .progress-label {
     font-size: 17px;
@@ -944,20 +957,21 @@ footer {
     font-weight: 600;
   }
   .Task-panel-section .Create-button {
-    padding: 0px 45px;
+    padding: 0px 40px;
     margin-top: 20px;
     border-radius: 10px;
     font-size: 14px;
-    left: 0%;
-    flex-basis: 70%;
+    left: -2.5%;
+    flex-basis: 62%;
   }
   .Task-panel-section .Reset-button {
     margin: 10px 0;
-    padding: 13px 40px;
-    margin-left: 15px;
+    padding: 13px 30px;
+    margin-left: 9px;
+    top: 2px;
     font-size: 15px;
     left: 0%;
-    flex-basis: 30%;
+    flex-basis: 32%;
   }
 
   /* ACTIVE TASKS SECTION */
@@ -971,24 +985,22 @@ footer {
   }
   .Active-task-section img{
     top: 2.5px;
-    height: 7%;
-    width: 7%;
+    height: 18px;
+    width: 18px;
   }
   .Task-card-heading {
     flex-direction: column;
-    align-items: center;
   }
   .Task-card-heading .Active-panel-title {
     font-size: 19px;
     position: relative;
-    right: 24.5%;
+    /* right: 24.5%; */
     bottom: 2px;
-    flex-wrap: nowrap;
   }
   .Task-card-links {
     /* flex-wrap: wrap; */
     position: relative;
-    right: 12px;
+    right: 7px;
     top: 12px;
     margin-bottom: 15px;
     margin-top: 10px;
