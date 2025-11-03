@@ -587,7 +587,7 @@ footer {
 
 /*----------TABLET-VIEW-----------*/
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1067px) {
 
   /* HEADER */
 
@@ -732,15 +732,15 @@ footer {
   .Task-panel-section .Create-button {
     font-size: 16px;
     flex-basis: 70%;
-    left: 1%;
+    /* left: 1%; */
     bottom: 5px;
   }
   .Task-panel-section .Reset-button {
     font-size: 16px;
     bottom: 5px;
-    flex-basis: 35%;
-    left: 2%;
-    margin-left: 20px;
+    flex-basis: 30%;
+    left: 1%;
+    margin:0px 0px 0px 15px;
   }
 
   /* ACTIVE TASKS SECTION */
@@ -820,7 +820,7 @@ footer {
     width: 100%;
     background-color: white;
     position: absolute;
-    top: 62px;
+    top: 61px;
     left: 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -942,13 +942,14 @@ footer {
   /* Upload-File */
 
   .Task-panel-section .upload-box {
-    width: 100%;
+    width: 98%;
     height: 100px;
-    margin: 13px 0;
+    margin: 13px 0 13px 3px;
   }
   .upload-file p {
     font-size: 17px;
   }
+  
   /* Button */
 
   .Task-panel-section .Buttons {
@@ -961,13 +962,14 @@ footer {
     margin-top: 20px;
     border-radius: 10px;
     font-size: 14px;
-    left: -2.5%;
+    left: -2.4%;
+    margin-left: 11px;
     flex-basis: 62%;
   }
   .Task-panel-section .Reset-button {
     margin: 10px 0;
     padding: 13px 30px;
-    margin-left: 9px;
+    margin-left: 5px;
     top: 2px;
     font-size: 15px;
     left: 0%;
@@ -990,6 +992,7 @@ footer {
   }
   .Task-card-heading {
     flex-direction: column;
+    padding: 12px 5px;
   }
   .Task-card-heading .Active-panel-title {
     font-size: 19px;
@@ -1007,13 +1010,15 @@ footer {
     width: 100%;
   }
   .Task-card-links label {
-    padding: 0.3rem 0.8rem;
-    font-size:clamp(0.85rem,3.5vw,1rem);
+    padding: 0.5rem 1rem;
+    font-size:clamp(0.9rem,3.5vw,1rem);
+    margin-left: clamp(0.5rem,1vw,0.7rem);
+    border-radius: 18px;
   }
   .task-card-container {
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    padding: 0.8rem;
+    padding: 0.5rem;
   }
   .task-card {
     width: 100%;
@@ -1056,5 +1061,20 @@ footer {
     display: block;
     text-align: center;
     font-size: 16px;
+  }
+}
+@media (min-width: 0px) and (max-width: 348px) {
+  .Task-card-links label {
+    padding: 0.4rem 0.8rem;
+    font-size:clamp(0.77rem,3.5vw,1rem);
+  }
+  .Task-panel-section .radio{
+    width: 55px;
+  }
+  .Task-panel-section .Create-button {
+    flex-basis: 65%;
+  }
+  .Task-panel-section .Reset-button{
+    flex-basis: 10%;
   }
 }
