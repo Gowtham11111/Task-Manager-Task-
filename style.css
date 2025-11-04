@@ -81,6 +81,7 @@ nav .nav-links {
   padding: 3px 10px 3px 10px;
   background-color: rgb(242, 243, 245);
   border-radius: 8px;
+  right: -2%;
 }
 .menu-toggle {
   display: none;
@@ -593,12 +594,7 @@ footer {
 
   header .Header-Container {
     position: relative;
-    left: 2.3%;
-  }
-  main .Main-title {
-    position: relative;
-    left: 1%;
-    margin-top: 12%;
+    left: 2.1%;
   }
   header {
     display: flex;
@@ -609,7 +605,7 @@ footer {
   .Nav-Container {
     display: inline-block;
     position: static;
-    margin-right: 12px;
+    margin-right: -14px;
   }
   nav .nav-links {
     display: flex;
@@ -629,7 +625,12 @@ footer {
     width: 90%;
     margin: 5% auto;
   }
-
+   main .Main-title {
+    position: relative;
+    left: 1.5%;
+    margin-top: 12%;
+  }
+  
   /* TASK PANEL SECTION */
 
   .Task-panel-section {
@@ -806,7 +807,7 @@ footer {
     padding: 14px 18px;
   }
   .Header-Container {
-    left: 0;
+    left: -1%;
   }
   header .Title {
     font-size: 25px;
@@ -854,7 +855,7 @@ footer {
     font-size: 23px;
     margin-top: 30%;
     margin-bottom: 5%;
-    left: -12px;
+    left: -14px;
   }
 
   /* TASK PANEL SECTION */
@@ -947,7 +948,7 @@ footer {
     margin: 13px 0 13px 3px;
   }
   .upload-file p {
-    font-size: 17px;
+    font-size: 16px;
   }
   
   /* Button */
@@ -1015,6 +1016,9 @@ footer {
     margin-left: clamp(0.5rem,1vw,0.7rem);
     border-radius: 18px;
   }
+  label.task-card-inactive{
+    margin-left: 11px;
+  }
   .task-card-container {
     grid-template-columns: 1fr;
     gap: 1.2rem;
@@ -1061,6 +1065,7 @@ footer {
     display: block;
     text-align: center;
     font-size: 16px;
+    line-height: 25px;
   }
 }
 @media (min-width: 0px) and (max-width: 348px) {
