@@ -56,7 +56,7 @@ nav .nav-links {
   color: rgba(0, 0, 0, 0.6);
 }
 .nav-links .Non-active-nav:hover {
-  background-color: rgb(242, 243, 245);
+  /* background-color: rgb(242, 243, 245); */
   color: rgb(93, 95, 239);
   border-radius: 11px;
   transition: background-color 0.3s;
@@ -82,6 +82,7 @@ nav .nav-links {
   background-color: rgb(242, 243, 245);
   border-radius: 8px;
   right: -2%;
+  cursor: pointer;
 }
 .menu-toggle {
   display: none;
